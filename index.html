@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#020805">
+<title>الهروب من النظام | 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loading"><div class="loader"></div><b>جارٍ تشغيل النظام...</b><small>تأكد من اتصال الإنترنت لتحميل محرك الرسوم ثلاثية الأبعاد</small></div>
+<div id="game">
+  <canvas id="scene"></canvas>
+  <header class="hud">
+    <div class="brand"><span class="dot"></span> الهروب من النظام <small>المنشأة 07</small></div>
+    <div class="stats"><span>◆ البيانات <b id="cores">0 / 5</b></span><span>◷ <b id="timer">00:00</b></span></div>
+    <button id="pause" class="smallbtn" aria-label="إيقاف مؤقت">Ⅱ</button>
+  </header>
+  <div class="mission"><b>المهمة الرئيسية</b><p id="missionText">اجمع 5 نوى بيانات ثم اهرب إلى البوابة الخضراء.</p><div class="progress"><i id="progress"></i></div></div>
+  <div id="toast" role="status"></div>
+  <div class="touch-ui">
+    <div id="stick" class="stick"><div id="knob" class="knob"></div><span class="up">▲</span><span class="down">▼</span><span class="left">◀</span><span class="right">▶</span></div>
+    <div class="actions"><button id="jump" class="action jump">↑<small>قفز</small></button><button id="run" class="action run">»<small>جري</small></button><button id="crouch" class="action crouch">⌄<small>تسلل</small></button></div>
+  </div>
+  <div id="overlay" class="overlay hidden">
+    <div class="panel"><div class="symbol" id="overlaySymbol">Ⅱ</div><h1 id="overlayTitle">إيقاف مؤقت</h1><p id="overlayText">خذ نفسًا، النظام ينتظرك.</p><button id="resume" class="primary">متابعة اللعب</button><button id="restart" class="secondary">إعادة المرحلة</button></div>
+  </div>
+  <div class="hint">اسحب دائرة الحركة · استخدم القفز لتجاوز الحواجز</div>
+</div>
+<script type="module" src="game.js"></script>
+</body>
+</html>
